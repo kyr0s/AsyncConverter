@@ -269,11 +269,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncHelper.cs" />
-    <Compile Include="MathodToAsyncConverter.cs" />
-    <Compile Include="FixReturnValueToTask.cs" />
+    <Compile Include="Helpers\AsyncHelper.cs" />
+    <Compile Include="QuickFixes\MathodToAsyncConverter.cs" />
+    <Compile Include="QuickFixes\FixReturnValueToTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeHelper.cs" />
+    <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="ZoneMarker.cs" />
   </ItemGroup>
   <ItemGroup>

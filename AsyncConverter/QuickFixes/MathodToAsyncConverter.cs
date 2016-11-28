@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using AsyncConverter.Helpers;
 using JetBrains.Annotations;
 using JetBrains.Application.Progress;
 using JetBrains.ProjectModel;
@@ -14,7 +15,7 @@ using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.TextControl;
 using JetBrains.Util;
 
-namespace AsyncConverter
+namespace AsyncConverter.QuickFixes
 {
     [ContextAction(Group = "C#", Name = "ConvertToAsync", Description = "Convert method to async and replace all inner call to async version if exist.")]
     public class MathodToAsyncConverter : ContextActionBase

@@ -10,7 +10,7 @@ using JetBrains.ReSharper.Psi.Tree;
 using JetBrains.ReSharper.Psi.Util;
 using JetBrains.Util;
 
-namespace AsyncConverter
+namespace AsyncConverter.Helpers
 {
     public static class AsyncHelper
     {

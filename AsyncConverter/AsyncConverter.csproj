@@ -269,11 +269,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Analyzers\NullReturnFromLambdaAnalyzer.cs" />
     <Compile Include="Analyzers\NullReturnFromMethodAnalyzer.cs" />
     <Compile Include="Helpers\AsyncHelper.cs" />
-    <Compile Include="Highlightings\NullReturnFromAsyncMethodHighlighting.cs" />
+    <Compile Include="Highlightings\NullReturnAsTaskHighlighting.cs" />
     <Compile Include="ContextActions\MathodToAsyncConverter.cs" />
-    <Compile Include="QuickFixes\FixReturnValueToTask.cs" />
+    <Compile Include="QuickFixes\ReturnValueToTask.cs" />
+    <Compile Include="QuickFixes\ReturnNullToTask.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\TypeHelper.cs" />
     <Compile Include="ZoneMarker.cs" />
@@ -330,7 +332,7 @@
   <Import Project="..\packages\JetBrains.Psi.Features.test.Framework.106.0.20160913.91631\build\JetBrains.Psi.Features.test.Framework.Targets" Condition="Exists('..\packages\JetBrains.Psi.Features.test.Framework.106.0.20160913.91631\build\JetBrains.Psi.Features.test.Framework.Targets')" />
   <Import Project="..\packages\JetBrains.ReSharper.SDK.Internal.106.0.20160913.94928\build\JetBrains.ReSharper.SDK.Internal.Targets" Condition="Exists('..\packages\JetBrains.ReSharper.SDK.Internal.106.0.20160913.94928\build\JetBrains.ReSharper.SDK.Internal.Targets')" />
   <PropertyGroup>
-    <PostBuildEvent>"$(SolutionDir)packages\NuGet.CommandLine.3.4.3\tools\nuget.exe" pack "$(SolutionDir)$(ProjectName)\package.nuspec"</PostBuildEvent>
+    <PostBuildEvent>"$(SolutionDir)packages\NuGet.CommandLine.3.4.3\tools\nuget.exe" pack "$(SolutionDir)$(ProjectName)\package.nuspec" -properties Configuration=$(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
